@@ -17,47 +17,35 @@ You work at a credit card company and as a value-add they want to start providin
     - private int cvv
     - public String name
     - public String email
-      
 - ### Constructor :
     - CreditCardUser(String name, String email)
-
 - ### Behaviors
     - public String getName()
     - public String getEmail()
   
 ## class Transaction
-
 - ### States :
     - private enum Category
     - private double amount
     - private Map<Category, Double> amountForEachCategory
-
 - ### Constructor:
     - Transaction(double amount, Map<Category, Double> amountForEachCategory)
-
 - ### Behaviour:
     - public Map<Category, Double> getAmountForEachCategory()
     - public double getAmount()
 
 ## class TransactionAnalyzer
-
 - ### States:
     - private List<Transaction> previousMonthTransactions
     - private List<Transaction> currentMonthTransactions
-
 - ### Constructor:
     - TransactionAnalyzer(List<Transaction> previousMonthTransactions, List<Transaction> currentMonthTransactions)       
-
 - ### Behaviour:
     - public void compareTwoTransactions()
     - public double totalAmountForCategory (Transaction.Category category, List<Transaction> transactions)
-
------------------
+      
 ## class EmailNotification
-
 - ### Constructor:
     - EmailNotification(CreditCardUser user, String emailContent)
-
 - ### Behaviour:
     - public void sendEmail(String recipientEmail, String emailContent)
-
